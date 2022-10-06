@@ -14,11 +14,11 @@ let numberTwo = 7;
 
 // console.log(numeroFistroPecador);
 
-function sum(numberOne, numberTwo) {
-  if (numberOne > numberTwo) {
-     return numberOne;
+function sum(numPepe, numLola) {
+  if (numPepe > numLola) {
+     return numPepe;
   } else { 
-     return numberTwo;
+     return numLola;
   }
 }
- console.log(sum);
+ console.log(sum(numberOne, numberTwo));
