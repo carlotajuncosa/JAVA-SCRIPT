@@ -10,6 +10,37 @@ Puedes usar este array para probar tu función: */
 
 const numbers = [1, 2, 3, 5, 45, 37, 58];
 
-function sumAll(param) {
-  // insert code
+function sumAll(array) {
+  let sum = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i]
+  }  
+  return sum;
 }
+console.log(sumAll(numbers)); 
+
+//function sumAll(array) {
+  //insert commet
+//}
+/* element = array[0];
+
+for (const element of array) {
+  if {
+
+  }
+} */
+
+
+/* 
+let suma = 0;
+
+cosonle.log(suma);
+ */
+
+/* for (let index = 0; index < array.length; index++)
+{
+
+}
+  return */
+ 

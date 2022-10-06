@@ -17,7 +17,7 @@ let longestWord = "";
 function getLongestWord (array) {
 
   for ( const element of array){
-  //console.log(element);  se hacen tantos console.logs como eleentos hay en el array
+  //console.log(element);  se hacen tantos console.logs como elementos hay en el array
 
     if (longestWord.length < element.length){
         longestWord = element;
