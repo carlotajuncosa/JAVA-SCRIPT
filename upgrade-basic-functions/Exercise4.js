@@ -7,7 +7,8 @@ const numbers = [12, 21, 38, 5, 45, 37, 6];
 
 function average(array) {
   
-  let sum = 0; //declaro variable sum y le doy vanlor num 0
+  let sum = 0; //declaro variable 
+  //sum y le doy vanlor num 0
 
 for (let i = 0; i < array.length; i++) { 
   // el bucle recorre todos los índices del array
