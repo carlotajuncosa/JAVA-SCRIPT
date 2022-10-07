@@ -23,10 +23,14 @@ const duplicates = [
   /* function removeDuplicates(param) {
     // insert code
   } */
-
+ 
   duplicates.map(element => console.log(element));
+
+  if (element != element) {
+    console.log(element);
+  }
+
   
-  
-console.log(duplicates);
+
 
 
