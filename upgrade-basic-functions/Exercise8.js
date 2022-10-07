@@ -28,9 +28,15 @@ const counterWords = [
     // insert code
   //}
 
-  for (var i = 0; i < counterWords.length; i++) {
-    //console.log(i)
-    if ( counterWords[i] === counterWords[i]) {
+  for (let i = 0; i < counterWords.length; i++) {
+    console.log('Estoy en el bucle 1' + counterWords[i]);
+    let repeatedWords = '';
+
+   //for (var j = i; j < counterWords.length; j++) {
+      //console.log('Estoy en el bucle 2' + counterWords[j]);
+
+    /* if ( counterWords[i] === counterWords[i]) {
       console.log(++i, counterWords[i])
-    }
+    } */
   }
+//}
