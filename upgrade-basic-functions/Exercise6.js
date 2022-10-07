@@ -16,6 +16,7 @@ const duplicates = [
     'chicken',
     'onion rings',
     'pasta',
+    'pasta',
     'soda'
   ];
   
@@ -24,11 +25,35 @@ const duplicates = [
     // insert code
   } */
  
-  duplicates.map(element => console.log(element));
-
-  if (element != element) {
+/*   duplicates.forEach((element, index) => {
     console.log(element);
+
+    if (element != element) {
+      console.log(element);
+    } 
+
+  }) */
+
+  function removeDuplicates(array) {
+
+  for (var i = 0; i < array.length; i++) {
+    //console.log('Estoy en el bucle 1' + duplicates[i]);
+    for (var j = i+1; j < array.length; j++) {
+      //console.log('Estoy en el bucle 2' + duplicates[j]);
+
+      if (array[i] == array[j]) {
+        array.splice(j,1); 
+        j--;
+       //console.log(duplicates[j--]);
+      } 
+    }
   }
+  return array;
+}
+
+ console.log(removeDuplicates(duplicates));
+    
+  
 
   
 
