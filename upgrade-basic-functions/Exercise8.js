@@ -42,21 +42,28 @@ const counterWords = [
 
   counter = {};
 
-  for (let i = 0; i < counterWords.length; i++) {
+function repeatCounter(array) {
+
+  for (let i = 0; i < array.length; i++) {
     //console.log('Estoy en el bucle 1' + counterWords[i]);
-    for (array[i] in counter);
-    //console.log(counter); devuelve el objeto vacío 11 veces igual que en el array;
-    counter[array[i]]++;
-    //console.log(counter); da error
     
-
-
-
-   //for (var j = i; j < counterWords.length; j++) {
-      //console.log('Estoy en el bucle 2' + counterWords[j]);
-
-    /* if ( counterWords[i] === counterWords[i]) {
-      console.log(++i, counterWords[i])
-    } */
+    if(array[i] in counter){
+      counter[array[i]]++;
+    } else {
+      counter[array[i]] = 1;
+    }
+    //si console.log(counter) aquí,
+    // se ve el proceso del bucle, las iteraciones que va haciendo por elemento
   }
-//}
+       //console.log(counter);//aquí ya se ve correctamente, 
+       //ahora toca añadir la función
+  return counter;
+}
+
+console.log(repeatCounter(counterWords));
+       
+
+
+
+
+ 
