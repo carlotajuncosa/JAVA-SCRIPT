@@ -21,19 +21,6 @@ const duplicates = [
   ];
   
 
-  /* function removeDuplicates(param) {
-    // insert code
-  } */
- 
-/*   duplicates.forEach((element, index) => {
-    console.log(element);
-
-    if (element != element) {
-      console.log(element);
-    } 
-
-  }) */
-
   function removeDuplicates(array) {
 
   for (var i = 0; i < array.length; i++) {
