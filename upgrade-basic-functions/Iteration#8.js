@@ -36,11 +36,8 @@ const counterWords = [
     'upgrade',
     'code'
   ];
-  //function repeatCounter(param) {
-    // insert code
-  //}
-
-  counter = {};
+ 
+counter = {};
 
 function repeatCounter(array) {
 
