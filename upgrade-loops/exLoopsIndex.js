@@ -37,7 +37,7 @@ const alumns = [
 Usa un bucle forof para recorrer todos los destinos 
 del array. Imprime en un ***console.log*** sus valores.*/
 
-const placesToTravel = ['Japon', 'Venecia', 'Murcia', 
+const placesToTravel1 = ['Japon', 'Venecia', 'Murcia', 
 'Santander', 'Filipinas', 'Madagascar']
 
 /* **Iteración #4: Probando For...in**
@@ -76,7 +76,7 @@ juguetes y elimina los que incluyan la palabra gato.
 Recuerda que puedes usar la función ***.includes()*** 
 para comprobarlo.Puedes usar este array: */
 
-const toys = [
+const toys1 = [
     {id: 5, name: 'Buzz MyYear'}, 
     {id: 11, name: 'Action Woman'}, 
     {id: 23, name: 'Barbie Man'}, 
