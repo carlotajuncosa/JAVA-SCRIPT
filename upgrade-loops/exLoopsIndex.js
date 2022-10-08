@@ -13,8 +13,6 @@ const products =
 'Cinrurón de Orión', 
 'AC/DC Camiseta']
 
-
-
 /* Iteración #2: Condicionales avanzados
 Comprueba en cada uno de los usuarios que 
 tenga al menos dos trimestres aprobados y 
