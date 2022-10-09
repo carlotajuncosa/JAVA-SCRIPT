@@ -21,7 +21,7 @@ const alumns = [
 
 if (alumns[i].T1 && alumns[i].T2
     || alumns[i].T1 && alumns[i]["T3"]
-    || alumns[i].T2 && alumns[i].T3) {
+    || alumns[i].T2 && alumns[i].T3) { //para acceder al valor de un elemento array[i].elemento o array[i]["elemento"]
         alumns[i].isApproved = true;
     } else {
         alumns[i].isApproved =false;
@@ -32,6 +32,6 @@ if (alumns[i].T1 && alumns[i].T2
 for (let alumn of alumns) {
   (alumn.T1 && alumn.T2) || (alumn.T1 && alumn.T3) || (alumn.T2 && alumn.T3)
     ? (alumn.isApproved = true)
-    : (alumn.isApproved = false);
+    : (alumn.isApproved = false); //para crear una propiedad nueva "array."
 }
 console.log(alumns);
