@@ -5,6 +5,11 @@ añade la propiedad ***isApproved*** a true o
 false en consecuencia. Una vez lo tengas compruébalo 
 con un ***console.log***. */
 
+//bucle para recorrer objetos
+//si 2T true entonces 
+//añadir propiedad isApproved = true
+//
+
 const alumns = [
     {name: 'Pepe Viruela', T1: false, T2: false, T3: true}, 
     {name: 'Lucia Aranda', T1: true, T2: false, T3: true},
