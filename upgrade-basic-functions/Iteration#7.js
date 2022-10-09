@@ -38,10 +38,13 @@ function finderName(array, key) {
     //console.log('Estoy recorriendo los elementos del array: ' + nameFinder[i]);
 
     if (array[i] === key) {
-      return `${i}: ${array[i]}`;
+      return `${i}: ${array[i]}`; // 
     }
   }
   return false;
 }
 
 console.log(finderName(nameFinder, "Peggy"));
+console.log(finderName(nameFinder, "Marc"));
+console.log(finderName(nameFinder, "Marta"));
+

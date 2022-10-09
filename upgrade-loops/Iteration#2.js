@@ -5,10 +5,12 @@ añade la propiedad ***isApproved*** a true o
 false en consecuencia. Una vez lo tengas compruébalo 
 con un ***console.log***. */
 
-//bucle para recorrer objetos
-//si 2T true entonces 
-//añadir propiedad isApproved = true
-//
+//1.bucle para recorrer los valores de un objeto dentro de array ¿FOR IN?
+//2.si 2T true entonces 
+//3.añadir propiedad isApproved = true
+
+
+
 
 const alumns = [
     {name: 'Pepe Viruela', T1: false, T2: false, T3: true}, 
@@ -17,3 +19,13 @@ const alumns = [
     {name: 'Alfredo Blanco', T1: false, T2: false, T3: false},
     {name: 'Raquel Benito', T1: true, T2: true, T3: true}
 ]
+
+for (i = 0; i < alumns.length; i++);
+if (alums[i[T1]] == true && alumns[i[T2]] == true & alumns[i[T3]] == true
+    || alums[i[T1]] == true && alumns[i[T2]] == false & alumns[i[T3]] == true
+    || alums[i[T1]] == false && alumns[i[T2]] == true & alumns[i[T3]] == true
+    || alums[i[T1]] == true && alumns[i[T2]] == true & alumns[i[T3]] == false) {
+        console.log(alumns[i] `$isApproved`);
+    } else {
+        console.log(alumns[i] `$isAnF`);
+    } 
