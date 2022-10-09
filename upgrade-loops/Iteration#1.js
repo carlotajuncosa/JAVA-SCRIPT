@@ -1,18 +1,46 @@
-//usa includes
+//usa includes. Poner Strings con camiseta en un nuevo arrary
 
+//Bucle For each o for
+//condicional función descartar strings con includes*
+//hacer funcion y meterlo todo
+//*includes no detecta una palabra en strings más largos
 
 const products = ['Camiseta de Pokemon', 
 'Pantalón coquinero', 'Gorra de gansta', 
 'Camiseta de Basket', 'Cinrurón de Orión', 
 'AC/DC Camiseta']
 
+/* const camisetas =[]; */
+
+function camisetas (array) {
+    for (let i = 0; i < array.length; i++) {
+        
+        if (array[i].includes('Camiseta')){
+            console.log(array[i])
+            }
+        }    
+}
+camisetas(products);
 
 
-products.forEach(element => console.log(element));
 
-if (products.includes('Camiseta de Basket') == false) {
-    console.log(products('lalala'));
-     };
+/* if ('Camiseta' in array[i]) {
+    camisetaProducts.includes(array[i]);
+} else {
+    null
+} */
+
+/* if (products[i] in camisetas) {
+    camisetas[products[i]]++;
+    } else {
+        camisetas[products[i]]=1;
+    } */
+
+
+
+//if (products.includes('Camiseta de Basket') == false) {
+  //  console.log(products('lalala'));
+   //  };
 
 
 //let word = 'Camiseta';
