@@ -7,7 +7,7 @@ const placesToTravel = ['Japon', 'Venecia', 'Murcia',
 'Santander', 'Filipinas', 'Madagascar']
 
 
-for (const places of placesToTravel) {
-    console.log(places)
+for (const places of placesToTravel) { //declaro una constante para acceder a los elementos del array
+    console.log(places) //imprimo los elementos del array
  }
 
