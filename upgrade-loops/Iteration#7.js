@@ -14,9 +14,17 @@ const toys = [
 	{id: 40, name: 'El gato felix', sellCount: 35}
 ]
 
-for (const toy of toys) { //declaro una constante para acceder a los elementos del array
+for (const toy of toys) {
+	if (toy.sellCount > 15) {
+		popularToys.push(toy);
+	}
+}
+
+console.log(popularToys);
+
+/* for (const toy of toys) { //declaro una constante para acceder a los elementos del array
     console.log(toy) //imprimo los elementos del array
     if (toys.sellCount > 15){
-        console.log(popularToys);
+        console.log(popularToys)
     }
- }
+ } */
