@@ -83,8 +83,17 @@ p3$$.textContent = 'Voy en medio!'; //le añado el texto al p
 
 const findDiv$$ = document.querySelectorAll('div'); //hago un array de los divs
 
-document.insertBefore(p3$$, finDiv$$[3]) 
+document.insertBefore(p3$$, finDiv$$[3]);
 //lo que quiero insertar p3$$, dentro del array en la posición 2finDiv$$[3]
 
 
 // 2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase .fn-insert-here
+
+const divInsertHere$$ = document.querySelectorAll('.fn-insert-here');
+
+for (let index = 1; index < divInsertHere$$.length; index++) { 
+  //recorremos los elementos desde la posición 1 porque la 0 es un h2
+  let p4$$ = document.createElement('p');
+  p4$$.textContent = 'Voy dentro';
+  divInsertHere$$[index].appendChild(p4$$);
+}
