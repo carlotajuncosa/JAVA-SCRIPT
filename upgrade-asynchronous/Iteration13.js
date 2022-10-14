@@ -19,3 +19,31 @@ const text = () => {
       });
   };
   button$$.addEventListener("click", () => text());
+
+  ///PARA PONER COMAS Y Y EN EL TEXTO
+
+/*   p$$.textContent = `El nombre ${response.name}`;
+
+
+
+  for (const ciudad of response.country) {
+
+   
+
+    if (response.country.indexOf(ciudad) === 0) {
+
+        p$$.textContent += ` tiene un ${(ciudad.probability * 100).toFixed(1)} porciento de ser de ${ciudad.country_id} `;
+
+    } else if (response.country.indexOf(ciudad) !== response.country.length - 1) {
+
+        p$$.textContent += `, un ${(ciudad.probability * 100).toFixed(1)} porciento de ser de ${ciudad.country_id} `;
+
+    } else {
+
+        p$$.textContent += ` y un ${(ciudad.probability * 100).toFixed(1)} porciento de ser de ${ciudad.country_id}.`;
+
+    }
+
+   
+
+  } */
