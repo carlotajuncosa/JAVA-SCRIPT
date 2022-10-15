@@ -117,6 +117,10 @@ const elBoss = {
 // vamos a imaginarnos que vamos a hablar con el mediante console.logs, cada vez que pongamos
 // un console.log será como hablar con el.
 
+/* const h1$$ = document.createElement('h1');
+h1$$.textContent = 'El Boss';
+h1$$.ap
+ */
 // entonces: // le vamos a decir = console.log()
 // 1: le vamos a decir "{su nombre}, te conozco y no me das ningún miedo!";
 
