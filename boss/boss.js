@@ -165,18 +165,15 @@ console.log(
 
 // 5: para matarlo tendrás que superar el reto y para ello tendrás que decirle las palabras
 // mágicas para que el mensaje quede tal que así "Jose luis, te miro y te destruyo".
-const mensaje =
-  elBoss.reto[0][0].sigueElReto[0].sigueElReto2.sigueElReto3
-    .pareceQueSabesBucearEntreObjetos.definitivamenteSabes
-    /* .filter((word) =>typeof word === 'string')
-    .join(" ") */;
+const mensaje = elBoss.reto[0][0].sigueElReto[0].sigueElReto2.sigueElReto3.pareceQueSabesBucearEntreObjetos.definitivamenteSabes.filter((word) =>typeof word === 'string').join(" ");
 
-    console.log(mensaje);
+/* console.log(mensaje);
 const newLength = mensaje.splice(5, 1);
 const noLast = mensaje.pop();
 const newSentence = mensaje.join(" "); 
 
-console.log(newSentence);
+console.log(newSentence); */
+//comento lineas anteriores porque si modifico el array n puedo imprimir el mensaje final
 
 
 //EXISTE LA OPCION DE HACER LO MISMO EN UNA LINEA
@@ -194,7 +191,6 @@ for (const poder of imgPower) {
 
 const familiares = elBoss.familiares;
 
-
 let totalEdades = 0;
 
 for (const familiar of familiares) {
@@ -205,3 +201,6 @@ console.log(totalEdades/familiares.length);
 
 
 // y mostraremos por pantalla el mensajeFinal.
+
+const finalMessage = elBoss.reto[0][0].sigueElReto[0].sigueElReto2.sigueElReto3.pareceQueSabesBucearEntreObjetos.definitivamenteSabes[8].mensajeFinal;
+  console.log(finalMessage);
