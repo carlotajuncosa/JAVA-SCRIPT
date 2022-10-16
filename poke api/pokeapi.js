@@ -56,7 +56,7 @@ window.onload = init; // defer
 /* Requisitos
 1 obtener lista pokedex y guardar variabe DONE
 2 obtener listado de todos los pokemosn DONE 
-3 obtener todos los pokemons iterar 1 por 1 AQUÏ SE ME HA JODIDO EL CODIGO
+3 obtener todos los pokemons iterar 1 por 1 AQUÏ SE ME HA JODIDO EL CÓDIGO
 4 a;adir al do los pokemos dentro del div del pokedex
 
 
