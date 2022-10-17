@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <script src="/events.js" defer></script>
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" 
+    content="ie=edge" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" 
+    href="pokeapi.css" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" 
+    rel="stylesheet" />
+    <script src="pokeapi.js" defer></script>
 </head>
 <body>
-    <h1>Vamos a aprender eventos</h1>
-
-    <!-- añadir directamente even listener 
-    en los elementos de html con atributos -->
-    <!-- <form onmouseover="sobreVuelaBoton()" 
-    onmouseleave="saleRaton()"
-    action="" 
-    style="border: 2px solid black;"> -->
-    <form style="border: 2px solid black;">
-        <label>
-            <p>Introduce tu nombre</p>
-            <input type="text" name="name">
-        </label>
-    </form>
-    <!-- </form> -->
-
-<!--     Escuchar el evento click del boton
- -->
-    <button onclick="carlota()">
-        Esto es un boton
-    </button>
-
-    <br>
-
-    <button id="super-button" style="font-size:60px">
-    SUPER BUTTON
-    </button>
-
+    <header>
+        <img src="/fakeHeader.png" alt="navigator" class="fakeNavigator">
+    </header>
+    <h1>Pokédex</h1>
+    <ol id="pokedex">
 </body>
+
+
 </html>
