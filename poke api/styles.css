@@ -1,4 +1,20 @@
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  background-image: url("container_bg.png") ;
+
+}
+.location-elements{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 
 body {
     background-color: #313131 ;
@@ -7,17 +23,19 @@ body {
     color: white;
   }
 
-  .fakeNavigator {
-  width: 100%;
+  .logo {
+  width: 40%;
+  padding: 30px;
+
   }
   .container {
     padding: 40px;
     margin: 0 auto;
   }
   h1 {
-    /* text-transform: uppercase;  */
+    text-transform: uppercase;
     text-align: left;
-    font-size: 54px;
+    font-size: 24px;
   }
   .card {
     list-style: none;
