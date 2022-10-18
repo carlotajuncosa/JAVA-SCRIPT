@@ -1,44 +1,47 @@
 /* TYPE SELECTORS */
 body {
-  background-image: url("container_bg.png");
   background-color: #313131;
-  margin: 100px;
-  font-family: rubik;
+  background-image: url("container_bg.png");
   color: white;
+  font-family: rubik;
+  padding: 15px 100px 50px 100px;
 }
-footer{
+footer {
   display: flex;
   flex-direction: column;
 }
 header {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 h1 {
-text-align: left;
-font-size: 2rem;
-color: #919191;
-background-color: white;
-width: 90%;
-padding-left: 50px;
-letter-spacing: 0.15ex;
+  background-color: white;
+  color: #919191;
+  font-size: 2rem;
+  letter-spacing: 0.15ex;
+  padding-left: 50px;
+  text-align: left;
+  width: 90%;
 }
 h3 {
-  padding-left: 15px;
-  padding-right: 15px;
   font-size: 1.3rem;
   line-height: 1.6rem;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 input {
-  outline: 1px solid #fca600 !important;
+  outline: 1px solid #015ecc !important;
+  padding: 0.5em 0;
   border-radius: 5px;
   padding-bottom: 0.5em;
   width: 350px;
   height: 25px;
   margin-top: -10px;
   font-size: 20px;
-  text-indent: 0.5em;
-  padding: 0.5em 0;
+  text-indent: 0.5em; 
+}
+input:focus {
+  outline: 1px solid #fca600 !important;
 }
 p {
   margin-top: 6px;
@@ -60,11 +63,11 @@ p {
   height: 180px;
 }
 .card-title {
-  text-transform:capitalize;
+  text-transform: capitalize;
   font-size: 26px;
   font-weight: normal;
   margin-bottom: 0;
-  display:flex;
+  display: flex;
   padding-left: 20px;
   padding-bottom: 0px;
 }
@@ -73,14 +76,14 @@ p {
   color: #c4c4c4;
   padding-top: 5px;
   text-transform: capitalize;
-  display:flex;
+  display: flex;
   padding-left: 20px;
 }
 .container {
   padding: 40px;
   margin: 0 auto;
 }
-.divPoke{
+.divPoke {
   width: 250px;
   height: 250px;
   background-color: #f4f4f4;
@@ -88,7 +91,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+}
 .h1-container {
   background-color: white;
   width: 90%;
@@ -101,8 +104,9 @@ p {
   width: 450px;
   height: 80px;
   margin-top: 25px;
+  margin-bottom: 25px;
 }
-.imgSize{
+.imgSize {
   width: 90%;
   height: 90%;
 }
@@ -127,12 +131,6 @@ p {
   background-color: white;
   width: 90%;
 }
-.prompt {
-  display: flex;
-  background-color: #313131;
-  justify-content: center;
-  gap: 40px;
-}
 .search-engine-display {
   display: flex;
   gap: 10px;
@@ -140,15 +138,22 @@ p {
 .text-button-align {
   padding-top: 10px;
 }
-.type{
-  padding: 2px 5px 2px 5px; 
-  border-radius: 5px; 
+.type {
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
   color: white;
   margin-bottom: 0px;
 }
-.types-container{
+.types-container {
   justify-content: flex-start;
   gap: 10px;
+}
+.user-interaction {
+  display: flex;
+  background-color: #313131;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
 }
 
 /* ID SELECTORS */
@@ -183,4 +188,3 @@ p,
     transform: translateY(-0px);
   }
 }
-
