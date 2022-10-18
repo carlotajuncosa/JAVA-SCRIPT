@@ -1,20 +1,22 @@
 const pokedex$$ = document.querySelector("#pokedex");
-const searchInput$$ = document.querySelector(".search-container input");
+const searchInput$$ = document.querySelector("input[name=filter]");
 let ALL_POKEMONS_INFO = []; //MAYUS cuando una variable global scope puede ser usada por todas
 
 const getAllPokemons = () =>
-  fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
     .then((response) => response.json())
     .then((response) => response.results)
-    .catch((error) => console.log('Error obteniendo todos los pokemons', error));
-
+    .catch((error) =>
+      console.log("Error obteniendo todos los pokemons", error)
+    );
 
 const getOnePokemon = async (url) => {
-  try { 
+  try {
     const response = await fetch(url);
     const result = await response.json();
 
     const pokemon = {
+      sprites: result.sprites,
       name: result.name,
       id: result.id,
       types: result.types.map((element) => element.type.name),
@@ -27,28 +29,27 @@ const getOnePokemon = async (url) => {
   }
 };
 
-  
 const renderTypes = (types, container) => {
   const div$$ = document.createElement("div");
   div$$.classList.add("card-subtitle", "types-container");
-    
+
   types.forEach((type) => {
-     const typeContainer$$ = document.createElement("p");
-     typeContainer$$.setAttribute("pokemon-type", type);
-     typeContainer$$.style.backgroundColor = typeColors[type];
-     typeContainer$$.classList.add("type");
-     typeContainer$$.textContent = type;
-     typeContainer$$.addEventListener("click", () => {
-        searchInput$$.setAttribute("value", type);
-        search(type);
-      });
-        div$$.appendChild(typeContainer$$);
-      });
-    
+    const typeContainer$$ = document.createElement("p");
+    typeContainer$$.setAttribute("pokemon-type", type);
+    typeContainer$$.style.backgroundColor = typeColors[type];
+    typeContainer$$.classList.add("type");
+    typeContainer$$.textContent = type;
+    typeContainer$$.addEventListener("click", () => {
+      searchInput$$.setAttribute("value", type);
+      search(type);
+    });
+    div$$.appendChild(typeContainer$$);
+  });
+
   container.appendChild(div$$);
 };
 
-const cleanPokedex = () => (pokedex$$.innerHTML= "");
+const cleanPokedex = () => (pokedex$$.innerHTML = "");
 
 const renderNoResults = () => {
   const li$$ = document.createElement("li");
@@ -61,41 +62,48 @@ const renderNoResults = () => {
   pokedex$$.appendChild(li$$);
 };
 
-    
 const renderPokemonCard = (poke) => {
-    const li$$ = document.createElement("li");
-    li$$.classList.add("card");
+  const li$$ = document.createElement("li");
+  li$$.classList.add("card");
 
-    /* const divPoke$$ = document.createElement('div');
-    divPoke$$.classList.add('divPoke');
-    divPoke$$.appendChild(img$$); */
+  const img$$ = document.createElement("img");
+  img$$.src = poke.sprites.other.dream_world.front_default;
 
-    const img$$ = document.createElement("img");
-    img$$.src = poke.sprites.other.dream_world.front_default;
-    img$$.alt = poke.name;
-    img$$.classList.add("imgSize");
-   /*  img$$.style.background = "300px 300px"; */
-   /*  img$$.style.backgroundColor(); */
-  
-    const p$$ = document.createElement("p");
-    p$$.classList.add("card-title");
-    p$$.textContent = poke.name;
-  
-    const diId$$ = document.createElement("div");
-    div$$.classList.add("card-subtitle");
-    div$$.textContent = "NUM." + poke.id;
-  
-  
-    li$$.appendChild(img$$);
-    li$$.appendChild(p$$);
-    li$$.appendChild(divId$$);
-   /*li$$.appendChild(divPoke$$);
-   pokedex$$.appendChild(li$$); 
-   divPoke$$.appendChild(img$$);*/
+  img$$.alt = poke.name;
+  img$$.classList.add("imgSize");
 
-   renderTypes(poke.types, li$$);
+  const divPoke$$ = document.createElement("div");
+  divPoke$$.classList.add("divPoke");
+  divPoke$$.appendChild(img$$);
 
-   pokedex$$.appendChild(li$$);
+  const p$$ = document.createElement("p");
+  p$$.classList.add("card-title");
+  p$$.textContent = poke.name;
+
+  const divId$$ = document.createElement("div");
+  divId$$.classList.add("card-subtitle");
+
+  let id = poke.id.toString();
+  let pad = "000";
+  var idFinal = pad.substring(0, pad.length - id.length) + id;
+
+  divId$$.textContent = "N.º" + idFinal;
+
+ /* OTRA VERSIÓN DE LA LÍNEA 86-90
+  if (poke.id.toString().length == 1) {
+    divId$$.textContent = "N.º" + "00" + poke.id;
+  } else if (poke.id.toString().length == 2) {
+    divId$$.textContent = "N.º" + "0" + poke.id;
+  } else {
+    divId$$.textContent = "N.º" + poke.id;
+  }
+  console.log(poke.id.length); */
+
+  li$$.appendChild(divPoke$$);
+  pokedex$$.appendChild(li$$);
+  li$$.appendChild(divId$$);
+  li$$.appendChild(p$$);
+  renderTypes(poke.types, li$$);
 };
 
 const renderPokemons = (pokemons) => {
@@ -115,44 +123,24 @@ const search = (value) => {
   renderPokemons(filtered);
 };
 
-allPokemons = allPokemons.sort((a, b) => a.id - b.id); //PROBLEMA EN ESTA LÍNEA
-
 const addEventsListeners = () => {
   searchInput$$.addEventListener("input", (event) => {
     search(event.target.value);
   });
 };
 
-//director de orquestra: irá llamando a otras funciones
- const init = async () =>{
-  //console.log("ejecutando peticiones pokedex");
+//FUNCIÓN MADRE
+const init = async () => {
   addEventsListeners();
-  const allPokemons = await getAllPokemons(); // para meter el await tengo que convertir en asincrona la funcion
-  //console.log('allPokemons', allPokemons);
+  const allPokemons = await getAllPokemons(); 
 
   for (const pokemon of allPokemons) {
     const pokemonIndividualInfo = await getOnePokemon(pokemon.url);
     ALL_POKEMONS_INFO.push(pokemonIndividualInfo);
-  };
+  }
 
-  console.log('Todos los pokemon info', ALL_POKEMONS_INFO);
+  console.log("Todos los pokemon info", ALL_POKEMONS_INFO);
   renderPokemons(ALL_POKEMONS_INFO);
-
 };
 
-window.onload = init; // defer
-
-
-
-
-
-
-
-
-
-/* Requisitos
-1 obtener lista pokedex y guardar variabe DONE
-2 obtener listado de todos los pokemosn DONE 
-3 obtener todos los pokemons iterar 1 por 1 AQUÏ SE ME HA JODIDO EL CÓDIGO
-4 a;adir al do los pokemos dentro del div del pokedex */
-
+window.onload = init; // = defer
