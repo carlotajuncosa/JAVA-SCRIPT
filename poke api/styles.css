@@ -1,3 +1,4 @@
+/* TYPE SELECTORS */
 body {
   background-image: url("container_bg.png");
   background-color: #313131;
@@ -5,26 +6,28 @@ body {
   font-family: rubik;
   color: white;
 }
-.container {
-  padding: 40px;
-  margin: 0 auto;
+footer{
+  display: flex;
+  flex-direction: column;
 }
 header {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }
 h1 {
-  text-align: left;
-  font-size: 2rem;
-  color: #919191;
-  background-color: white;
-  width: 90%;
-  padding-left: 50px;
-  letter-spacing: 0.15ex;
+text-align: left;
+font-size: 2rem;
+color: #919191;
+background-color: white;
+width: 90%;
+padding-left: 50px;
+letter-spacing: 0.15ex;
 }
-.h1-container {
-  background-color: white;
-  width: 90%;
+h3 {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
 }
 input {
   outline: 1px solid #fca600 !important;
@@ -36,6 +39,72 @@ input {
   font-size: 20px;
   text-indent: 0.5em;
   padding: 0.5em 0;
+}
+p {
+  margin-top: 6px;
+  padding-bottom: 15px;
+}
+
+/* CLASS SELECTORS */
+.card {
+  list-style: none;
+  padding: 20px;
+  background-color: white;
+  color: #222;
+  text-align: center;
+}
+.card:hover {
+  animation: bounce 0.5s linear;
+}
+.card-image {
+  height: 180px;
+}
+.card-title {
+  text-transform:capitalize;
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 0;
+  display:flex;
+  padding-left: 20px;
+  padding-bottom: 0px;
+}
+.card-subtitle {
+  font-weight: lighter;
+  color: #c4c4c4;
+  padding-top: 5px;
+  text-transform: capitalize;
+  display:flex;
+  padding-left: 20px;
+}
+.container {
+  padding: 40px;
+  margin: 0 auto;
+}
+.divPoke{
+  width: 250px;
+  height: 250px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+.h1-container {
+  background-color: white;
+  width: 90%;
+}
+.green {
+  background-color: #4dad5c;
+  border-radius: 5px;
+  float: left;
+  padding-bottom: 0.5em;
+  width: 450px;
+  height: 80px;
+  margin-top: 25px;
+}
+.imgSize{
+  width: 90%;
+  height: 90%;
 }
 .logo {
   width: 40%;
@@ -68,69 +137,8 @@ input {
   display: flex;
   gap: 10px;
 }
-
-
-
-
-
-h2,
-p,
-.search-engine-display {
-  max-width: 450px;
-}
-p {
-  margin-top: 6px;
-  padding-bottom: 15px;
-}
-h3 {
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-}
 .text-button-align {
   padding-top: 10px;
-}
-.green {
-  background-color: #4dad5c;
-  border-radius: 5px;
-  float: left;
-  padding-bottom: 0.5em;
-  width: 450px;
-  height: 80px;
-  margin-top: 25px;
-}
-.card {
-  list-style: none;
-  padding: 20px;
-  background-color: white;
-  color: #222;
-  text-align: center;
-}
-.card-title {
-  text-transform:capitalize;
-  font-size: 26px;
-  font-weight: normal;
-  margin-bottom: 0;
-  display:flex;
-  padding-left: 20px;
-  padding-bottom: 0px;
-
-}
-.card-subtitle {
-  font-weight: lighter;
-  color: #c4c4c4;
-  padding-top: 5px;
-/*   border: 2px solid #fabada ;
-   border-radius: 5px;
-  width: 30%;*/
-  text-transform: capitalize;
-  display:flex;
-  padding-left: 20px;
-}
-.types-container{
-  justify-content: flex-start;
-  gap: 10px;
 }
 .type{
   padding: 2px 5px 2px 5px; 
@@ -138,31 +146,12 @@ h3 {
   color: white;
   margin-bottom: 0px;
 }
-
-.card-image {
-  height: 180px;
+.types-container{
+  justify-content: flex-start;
+  gap: 10px;
 }
 
-.divPoke{
-width: 250px;
-height: 250px;
-background-color: #f4f4f4;
-border-radius: 5px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.imgSize{
-  width: 90%;
-  height: 90%;
-}
-
-footer{
-  display: flex;
-  flex-direction: column;
-}
-
+/* ID SELECTORS */
 #pokedex {
   padding-inline-start: 0;
   display: grid;
@@ -171,9 +160,15 @@ footer{
   align-items: start;
   justify-items: center;
 }
-.card:hover {
-  animation: bounce 0.5s linear;
+
+/* GROUPING SELECTORS */
+h2,
+p,
+.search-engine-display {
+  max-width: 450px;
 }
+
+/* KEYFRAMES */
 @keyframes bounce {
   20% {
     transform: translateY(-6px);
@@ -189,5 +184,3 @@ footer{
   }
 }
 
-
-/* DESCARTADO */
