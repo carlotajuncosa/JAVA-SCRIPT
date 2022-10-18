@@ -49,6 +49,11 @@ p {
 }
 
 /* CLASS SELECTORS */
+.border-error {
+  width: 91%;
+  border: solid red 2px;
+  border-radius: 10px;
+}
 .card {
   list-style: none;
   padding: 20px;
@@ -71,6 +76,12 @@ p {
   padding-left: 20px;
   padding-bottom: 0px;
 }
+.card-title-error{
+  font-size: 20px;
+  color: red;
+  padding-left: 10px;
+  padding-bottom: 0px;
+}
 .card-subtitle {
   font-weight: lighter;
   color: #c4c4c4;
@@ -78,6 +89,12 @@ p {
   text-transform: capitalize;
   display: flex;
   padding-left: 20px;
+}
+.card-subtitle-error{
+  color: #919191;
+  padding-left: 10px;
+  padding-bottom: 0px;
+  margin-top: -5px;
 }
 .container {
   padding: 40px;
@@ -188,3 +205,12 @@ p,
     transform: translateY(-0px);
   }
 }
+
+
+/* 
+¡Ningún Pokémon coincide con tu búsqueda! 
+Prueba estas sugerencias para encontrar un Pokémon:
+- Reduce el número de parámetros de búsqueda
+- Busca solo un tipo de Pokémon a la vez
+- Prueba múltiples tamaños y formas de cuerpo
+*/

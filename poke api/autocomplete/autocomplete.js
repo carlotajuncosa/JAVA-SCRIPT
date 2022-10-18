@@ -228,6 +228,7 @@ function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
     var currentFocus;
+    //console.log(inp);
     /*execute a function when someone writes in the text field:*/
     inp.addEventListener("input", function(e) {
         var a, b, i, val = this.value;
@@ -320,5 +321,11 @@ function autocomplete(inp, arr) {
       closeAllLists(e.target);
   });
   }
+
+  //console.log(document.getElementById("myInput"));
+
+  autocomplete(document.getElementById("myInput"), countries);
+
+  
   
 

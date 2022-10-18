@@ -52,14 +52,39 @@ const renderTypes = (types, container) => {
 const cleanPokedex = () => (pokedex$$.innerHTML = "");
 
 const renderNoResults = () => {
-  const li$$ = document.createElement("li");
+  
+  const divError$$ = document.createElement('div');
+  divError$$.classList.add("border-error");
 
-  const p$$ = document.createElement("p");
-  p$$.classList.add("card-title");
-  p$$.textContent = "No se encuentran resultados";
+  const pRed$$ = document.createElement("p");
+  pRed$$.classList.add("card-title-error");
+  pRed$$.textContent = "¡Ningún pokemon coincide con tu búsqueda!";
+  
+  const pGrey$$ = document.createElement("p");
+  pGrey$$.classList.add("card-subtitle-error");
+  pGrey$$.textContent = "Prueba estas sugerencias para encontrar un Pokémon:";
+  
+  const pGrey1$$ = document.createElement("p");
+  pGrey1$$.classList.add("card-subtitle-error");
+  pGrey1$$.textContent = "· Reduce el número de parámetros de búsqueda";
 
-  li$$.appendChild(p$$);
-  pokedex$$.appendChild(li$$);
+  const pGrey2$$ = document.createElement("p");
+  pGrey2$$.classList.add("card-subtitle-error");
+  pGrey2$$.textContent = "· Busca solo un tipo de Pokémon a la vez";
+
+  const pGrey3$$ = document.createElement("p");
+  pGrey3$$.classList.add("card-subtitle-error");
+  pGrey3$$.textContent = "· Prueba múltiples tamaños y formas de cuerpo";
+
+  pokedex$$.appendChild(divError$$);
+  divError$$.appendChild(pRed$$);
+  divError$$.appendChild(pGrey$$);
+  divError$$.appendChild(pGrey1$$);
+  divError$$.appendChild(pGrey2$$);
+  divError$$.appendChild(pGrey3$$);
+  
+  
+
 };
 
 const renderPokemonCard = (poke) => {
